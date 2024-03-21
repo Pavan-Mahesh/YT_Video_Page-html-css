@@ -1,19 +1,9 @@
-.video-chapter-flex {
-  display: flex;
-  justify-content: center;
-}
-
-.main-video {
-  border-radius: 16px;
-  width: 640px;
-  height: 360px;
-}
-
 .chapters-container {
   border: 1px solid lightgray;
-  height: 360px;
+  height: 359px;
+  max-width: 400px;
   position: relative;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   margin-left: 25px;
 }
@@ -21,7 +11,7 @@
 .chapter-scroll-box {
   height: 300px;
   overflow-y: scroll;
-  scrollbar-color: rgb(97, 97, 97) white;
+  position: relative;
 }
 
 .chapter-scroll-box::after {
@@ -35,7 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 8px 4px 8px 16px;
 }
 
 .chapter-header-name {
@@ -45,13 +35,18 @@
 
 .chapter-header-close {
   width: 24px;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.chapter-header-close:hover {
+  background-color: rgb(225, 225, 225);
 }
 
 .chapter {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 8px 0px 8px 16px;
+  padding: 8px 6px 8px 16px;
 }
 
 .chapter-thumbnail {
@@ -60,7 +55,7 @@
 }
 
 .chapter-info {
-  width: 160px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -97,8 +92,34 @@
   justify-content: space-between;
 }
 
+.chapter-icons {
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
+  opacity: 0;
+  position: absolute;
+}
+
+.chapter-icons img {
+  width: 26px;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.share:hover,
+.repeat:hover{
+  background-color: rgb(225, 225, 225);
+}
+
 .chapter:hover{
   background-color: rgb(240, 240, 240);
+}
+
+.chapter:hover .chapter-icons{
+  position: static;
+  opacity: 1;
 }
 
 .chapter-sync-flex {
