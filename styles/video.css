@@ -111,8 +111,7 @@
   pointer-events: none;
 }
 
-.speaker-icon,
-.volume-icon {
+.speaker-icon {
   pointer-events: all;
 }
 
@@ -216,6 +215,11 @@
 .right-arrow {
   width: 10px;
   margin-left: 6px;
+}
+
+.speaker-icon:hover ~ .volume-icon,
+.volume-icon:hover{
+  pointer-events: all;
 }
 
 .speaker-icon:hover ~ .video-time,
