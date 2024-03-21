@@ -5,8 +5,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/video.css">
     <link rel="stylesheet" href="styles/chapters.css">
     <link rel="stylesheet" href="styles/general.css">
@@ -16,11 +16,45 @@
       <div class="grid-layout">
         <div class="main-video">
           <img class="main-video-thumbnail" src="thumb-nails/thumbnail-1.webp">
-          <div class="video-time-bar">
-            <div class="part-1">
-              <img class="time-bar-circle" src="controls-icons/time-bar-circle.png">
+          <div class="control">
+            <div class="video-time-bar">
+              <div class="part-1">
+                <img class="time-bar-circle" src="controls-icons/time-bar-circle.png">
+              </div>
+              <div class="part-2"></div>
             </div>
-            <div class="part-2"></div>
+            <div class="control-icons">
+              <div class="left-region">
+                <div class="play-icon">
+                  <img class="icon" src="controls-icons/play.png">
+                  <div class="tooltip">Play</div>
+                </div>
+                <div class="next-icon">
+                  <img class="icon" src="controls-icons/next-button.png">
+                  <div class="image-tooltip">
+                    <img class="tooltip-img" src="thumb-nails/next.webp">
+                    <div class="time-stamp">29:37</div>
+                  </div>
+                </div>
+                <div class="speaker-volume-time">
+                  <div class="speaker-icon">
+                    <img class="icon" src="controls-icons/speaker.png">
+                    <div class="tooltip">Mute</div>
+                  </div>
+                  <div class="volume-icon">
+                    <div class="volume-bar">
+                      <div class="part-1"></div>
+                      <div class="part-2"></div>
+                      <img class="volume-bar-circle" src="controls-icons/volume-bar-circle.png">
+                    </div>
+                  </div>
+                  <div class="video-time">
+                    7:68 / 6:31:23 <span class="mid-dot">&middot;</span> 1. HTML Basic
+                    <img class="right-arrow" src="controls-icons/right-arrow.png">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="chapters-container">

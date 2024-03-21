@@ -10,27 +10,39 @@
 
 .main-video {
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .main-video-thumbnail {
-  border-radius: 12px;
   width: 640px;
   height: 360px;
+  display: block;
+}
+
+.control {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 .video-time-bar {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 45px;
-  left: 0px;
-  right: 0px;
+  width: 620px;
 }
 
 .video-time-bar .part-1 {
-  width: 255px;
-  height: 4px;
+  width: 2%;
+  height: 3px;
   background-color: rgb(245, 0, 87);
   position: relative;
 }
@@ -53,7 +65,156 @@
 }
 
 .video-time-bar .part-2 {
-  width: 355px;
-  height: 4px;
+  width: 98%;
+  height: 3px;
   background-color: rgba(200, 200, 200, 0.4);
+}
+
+.control-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px;
+}
+
+.left-region {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.play-icon,
+.next-icon,
+.speaker-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-region .icon {
+  width: 20px;
+  position: relative;
+}
+
+.play-icon .icon {
+  width: 18px;
+}
+
+.speaker-volume-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: -10px;
+  font-size: 14px;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: all 0.15s;
+  pointer-events: none;
+}
+
+.image-tooltip {
+  position: absolute;
+  top: -125px;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+  pointer-events: none;
+}
+
+.tooltip-img {
+  width: 240px;
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  border: 3px solid rgb(60, 60, 60);
+}
+
+.time-stamp {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.speaker-icon .tooltip {
+  top: -50px;
+}
+
+.volume-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 10px;
+  margin-left: 16px;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transition: all 0.2s ease-in;
+}
+
+.volume-bar .part-1{
+  width: 15px;
+  height: 3px;
+  background-color: white;
+}
+
+.volume-bar .part-2{
+  width: 35px;
+  height: 3px;
+  background-color: rgba(200, 200, 200, 0.4);
+}
+
+.volume-bar-circle {
+  width: 10px;
+  position: absolute;
+  right: 30px;
+}
+
+.video-time {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: white;
+  font-weight: 300;
+  white-space: nowrap;
+  position: absolute;
+  left: 40px;
+  transition: left 0.2s ease-in;
+  pointer-events: none;
+}
+
+.mid-dot {
+  font-weight: 700;
+  margin: 0px 5px;
+}
+
+.right-arrow {
+  width: 10px;
+  margin-left: 6px;
+}
+
+.speaker-volume-time:hover .video-time {
+  left: 110px;
+}
+
+.speaker-volume-time:hover .volume-bar {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.play-icon:hover .tooltip,
+.next-icon:hover .image-tooltip,
+.speaker-volume-time:hover .tooltip {
+  opacity: 1;
 }
