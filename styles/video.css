@@ -21,23 +21,29 @@
 }
 
 .control {
-  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0));
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height: 70px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  opacity: 0;
+  transition: all 0.15s ease-in;
+}
+
+.main-video:hover .control{
+  opacity: 1;
 }
 
 .video-time-bar {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 610px;
+  width: 620px;
   height: 3px;
   background-color: rgba(200, 200, 200, 0.4);
   transition: all 0.15s;
@@ -81,7 +87,7 @@
 }
 
 .control-icons {
-  width: 608px;
+  width: 610px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -93,8 +99,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 25px;
+  gap: 32px;
   margin-left: 10px;
+  width: 300px;
 }
 
 .play-icon,
@@ -103,15 +110,28 @@
 .volume-icon,
 .current-chapter-name,
 .auto-play-icon,
-.caption-icon {
+.caption-icon,
+.setting-icon,
+.theater-icon,
+.miniplayer-icon,
+.full-screen-icon{
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  opacity: 0.9;
 }
 
 .left-region .icon {
   width: 16px;
+}
+
+.play-icon .icon {
+  width: 14px;
+}
+
+.speaker-icon .icon {
+  width: 18px;
 }
 
 .speaker-volume-time {
@@ -126,8 +146,8 @@
 .tooltip {
   position: absolute;
   top: -50px;
-  font-size: 12px;
-  background-color: rgb(60, 60, 60);
+  font-size: 13px;
+  background-color: rgb(40, 40, 40);
   font-weight: 500;
   color: white;
   padding: 4px 8px;
@@ -138,12 +158,16 @@
   white-space: nowrap;
 }
 
+.play-icon .tooltip {
+  right: -30px;
+}
+
 .image-tooltip {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: -190px;
-  right: -170px;
+  right: -175px;
   opacity: 0;
   transition: all 0.2s ease-in;
   pointer-events: none;
@@ -162,6 +186,10 @@
   border: 3px solid rgb(60, 60, 60);
 }
 
+.full-screen-icon .tooltip {
+  left: -60px;
+}
+
 .time-stamp {
   position: absolute;
   bottom: 3px;
@@ -177,9 +205,9 @@
 .volume-bar {
   display: flex;
   align-items: center;
-  width: 50px;
+  width: 55px;
   height: 20px;
-  margin: 0px 12px;
+  margin: 0px 15px;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: all 0.2s ease-in;
 }
@@ -208,13 +236,15 @@
 .video-time {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
   color: white;
   font-weight: 300;
   white-space: nowrap;
   cursor: text;
-  margin-left: -55px;
-  transition: margin-left 0.2s ease-in;
+  margin-left: -64px;
+  width: 188px;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
   position: relative;
 }
 
@@ -224,19 +254,18 @@
 }
 
 .current-chapter {
+  font-weight: 400;
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-
-.current-chapter:hover {
-  font-weight: 400;
+  opacity: 0.9;
 }
 
 .right-arrow {
   width: 6px;
   margin-left: 6px;
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .speaker-icon:hover ~ .volume-icon,
@@ -247,6 +276,7 @@
 .speaker-icon:hover ~ .video-time,
 .volume-icon:hover ~ .video-time {
   margin-left: 0px;
+  width: 130px;
 }
 
 .speaker-icon:hover ~ .volume-icon .volume-bar,
@@ -271,27 +301,53 @@
 }
 
 .toggle-button .icon {
-  width: 28px;
+  width: 26px;
   position: absolute;
-  right: -10px;
-  bottom: -7.5px;
+  right: -9px;
+  bottom: -7px;
 }
 
 .auto-play-icon .tooltip {
-  top: -55.5px;
+  top: -52px;
 }
 
-.caption-icon .icon{
+.setting-icon .icon,
+.full-screen-icon .icon {
   width: 20px;
 }
 
+.caption-icon .icon {
+  width: 22px;
+}
+
+.theater-icon .icon,
+.miniplayer-icon .icon {
+  width: 24px;
+}
+
+.play-icon:hover,
 .play-icon:hover .tooltip,
+.next-icon:hover,
 .next-icon:hover .image-tooltip,
 .next-icon:hover .tooltip,
+.speaker-icon:hover,
 .speaker-icon:hover .tooltip,
+.volume-icon:hover,
 .volume-icon:hover .tooltip,
+.current-chapter:hover,
+.current-chapter:hover .right-arrow,
 .current-chapter:hover .tooltip,
+.auto-play-icon:hover,
 .auto-play-icon:hover .tooltip,
-.caption-icon:hover .tooltip {
-  opacity: 1;
+.caption-icon:hover,
+.caption-icon:hover .tooltip,
+.setting-icon:hover,
+.setting-icon:hover .tooltip,
+.theater-icon:hover,
+.theater-icon:hover .tooltip,
+.miniplayer-icon:hover,
+.miniplayer-icon:hover .tooltip,
+.full-screen-icon:hover,
+.full-screen-icon:hover .tooltip {
+  opacity: 1.5;
 }
