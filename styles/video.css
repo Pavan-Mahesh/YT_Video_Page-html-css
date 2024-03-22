@@ -21,7 +21,7 @@
 }
 
 .control {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -35,39 +35,49 @@
 
 .video-time-bar {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  width: 620px;
+  width: 610px;
+  height: 3px;
+  background-color: rgba(200, 200, 200, 0.4);
+  transition: all 0.15s;
 }
 
-.video-time-bar .part-1 {
-  width: 2%;
+.video-time-bar .completed {
+  display: flex;
+  align-items: center;
+  width: 16%;
+}
+
+.video-time-bar .red-bar {
+  width: 100%;
   height: 3px;
   background-color: rgb(245, 0, 87);
-  position: relative;
+  transition: all 0.15s;
 }
 
 .time-bar-circle {
-  position: absolute;
-  right: -4px;
-  bottom: -4px;
   width: 12px;
+  margin-left: -6px;
   opacity: 0;
   transition: all 0.15s;
+}
+
+.video-time-bar:hover,
+.video-time-bar:hover .red-bar{
+  height: 5px;
 }
 
 .video-time-bar:hover .time-bar-circle {
   opacity: 1;
 }
 
-.time-bar-circle:hover {
-  transform: scale(1.5);
+.completed:hover .red-bar {
+  height: 7px;
 }
 
-.video-time-bar .part-2 {
-  width: 98%;
-  height: 3px;
-  background-color: rgba(200, 200, 200, 0.4);
+.completed:hover .time-bar-circle{
+  transform: scale(1.5);
 }
 
 .control-icons {
@@ -83,14 +93,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   margin-left: 10px;
 }
 
 .play-icon,
 .next-icon,
 .speaker-icon,
-.volume-icon {
+.volume-icon,
+.current-chapter-name,
+.auto-play-icon,
+.caption-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,43 +111,48 @@
 }
 
 .left-region .icon {
-  width: 20px;
-}
-
-.play-icon .icon {
-  width: 18px;
+  width: 16px;
 }
 
 .speaker-volume-time {
   display: flex;
   align-items: center;
-  pointer-events: none;
 }
 
-.speaker-icon {
-  pointer-events: all;
+.volume-icon {
+  pointer-events: none;
 }
 
 .tooltip {
   position: absolute;
   top: -50px;
-  font-size: 14px;
+  font-size: 12px;
   background-color: rgb(60, 60, 60);
+  font-weight: 500;
   color: white;
   padding: 4px 8px;
   border-radius: 3px;
   opacity: 0;
   transition: all 0.15s;
   pointer-events: none;
+  white-space: nowrap;
 }
 
 .image-tooltip {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: -165px;
-  right: -180px;
+  top: -190px;
+  right: -170px;
   opacity: 0;
   transition: all 0.2s ease-in;
   pointer-events: none;
+}
+
+.image-tooltip .tooltip{
+  position: relative;
+  top: 6px;
+  text-align: center;
 }
 
 .tooltip-img {
@@ -142,14 +160,6 @@
   display: block;
   border-radius: 6px;
   border: 3px solid rgb(60, 60, 60);
-}
-
-.next-icon .tooltip {
-  top: -185px;
-  right: -180px;
-  width: 229px;
-  text-align: center;
-  padding-bottom: 6px;
 }
 
 .time-stamp {
@@ -202,9 +212,10 @@
   color: white;
   font-weight: 300;
   white-space: nowrap;
-  transition: margin-left 0.2s ease-in;
+  cursor: text;
   margin-left: -55px;
-  pointer-events: none;
+  transition: margin-left 0.2s ease-in;
+  position: relative;
 }
 
 .mid-dot {
@@ -212,9 +223,20 @@
   margin: 0px 5px;
 }
 
+.current-chapter {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.current-chapter:hover {
+  font-weight: 400;
+}
+
 .right-arrow {
-  width: 10px;
+  width: 6px;
   margin-left: 6px;
+  cursor: pointer;
 }
 
 .speaker-icon:hover ~ .volume-icon,
@@ -232,10 +254,44 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.right-region {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  margin-right: 10px;
+}
+
+.toggle-button {
+  background-color: rgb(110, 110, 110);
+  height: 12px;
+  width: 30px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.toggle-button .icon {
+  width: 28px;
+  position: absolute;
+  right: -10px;
+  bottom: -7.5px;
+}
+
+.auto-play-icon .tooltip {
+  top: -55.5px;
+}
+
+.caption-icon .icon{
+  width: 20px;
+}
+
 .play-icon:hover .tooltip,
 .next-icon:hover .image-tooltip,
 .next-icon:hover .tooltip,
 .speaker-icon:hover .tooltip,
-.volume-icon:hover .tooltip {
+.volume-icon:hover .tooltip,
+.current-chapter:hover .tooltip,
+.auto-play-icon:hover .tooltip,
+.caption-icon:hover .tooltip {
   opacity: 1;
 }
