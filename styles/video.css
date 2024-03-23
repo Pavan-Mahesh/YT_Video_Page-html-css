@@ -78,7 +78,7 @@
   width: 14px;
   transform: scale(0);
   position: absolute;
-  left: calc(60% - 6px);
+  left: calc(60% - 7px);
   transition: all 0.15s;
 }
 
