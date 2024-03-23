@@ -47,6 +47,7 @@
   display: flex;
   align-items: center;
   padding: 8px 6px 8px 16px;
+  cursor: pointer;
 }
 
 .chapter-thumbnail {
@@ -140,4 +141,5 @@
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 30px;
+  cursor: pointer;
 }

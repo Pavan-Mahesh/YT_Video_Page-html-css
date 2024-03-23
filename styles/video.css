@@ -21,12 +21,13 @@
 }
 
 .control {
-  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0));
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  height: 100px;
+  height: 60px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -44,11 +45,11 @@
   justify-content: space-between;
   align-items: center;
   width: 620px;
-  height: 22px;
+  margin: auto 0px;
 }
 
 .video-time-bar .completed {
-  height: 3px;
+  height: 2.75px;
   background-color: rgb(255, 0, 0);
   transition: all 0.15s;
 }
@@ -69,8 +70,8 @@
 }
 
 .video-time-bar .incompleted {
-  height: 2.5px;
-  background-color: rgba(240, 240, 240, 0.5);
+  height: 2.75px;
+  background-color: rgba(170, 170, 170, 0.5);
   transition: all 0.15s;
 }
 
@@ -84,19 +85,20 @@
 
 .video-time-bar:hover .completed,
 .video-time-bar:hover .incompleted{
-  height: 5px;
+  height: 4.5px;
 }
 
 .video-time-bar:hover .time-bar-circle {
   transform: scale(1);
 }
 
-.current-position:hover .completed {
+.current-position:hover .completed,
+.current-position:hover .incompleted {
   height: 9px;
 }
 
 .current-position:hover .time-bar-circle{
-  transform: scale(1.55);
+  transform: scale(1.54);
 }
 
 .video-time-bar > .completed:hover,
@@ -110,7 +112,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 12px 16px;
+  margin: 6px 16px 14px 16px;
 }
 
 .left-region {
@@ -138,6 +140,7 @@
   align-items: center;
   position: relative;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .left-region .icon {
@@ -224,19 +227,19 @@
   display: flex;
   align-items: center;
   width: 60px;
-  margin: 0px 13px;
+  margin: 0px 10px 0px 14px;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: all 0.2s ease-in;
 }
 
 .volume-bar .completed{
   width: 35%;
-  height: 4px;
+  height: 3px;
   background-color: white;
 }
 
 .volume-bar-circle {
-  width: 10px;
+  width: 12px;
 }
 
 .volume-bar .incompleted {
@@ -261,7 +264,7 @@
 
 .mid-dot {
   font-weight: 700;
-  margin: 0px 5px;
+  margin: 0px 4px;
 }
 
 .current-chapter {
@@ -286,7 +289,7 @@
 
 .speaker-icon:hover ~ .video-time,
 .volume-icon:hover ~ .video-time {
-  margin-left: 0px;
+  margin-left: -3px;
   width: 130px;
 }
 
