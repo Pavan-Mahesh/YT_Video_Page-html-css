@@ -40,12 +40,17 @@
   opacity: 1;
 }
 
+.video-time-bar-flex {
+  display: flex;
+  align-items: center;
+  height: 18px;
+}
+
 .video-time-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 620px;
-  margin: auto 0px;
 }
 
 .video-time-bar .completed {
@@ -94,7 +99,7 @@
 
 .current-position:hover .completed,
 .current-position:hover .incompleted {
-  height: 9px;
+  height: 8.75px;
 }
 
 .current-position:hover .time-bar-circle{
@@ -103,7 +108,7 @@
 
 .video-time-bar > .completed:hover,
 .video-time-bar > .incompleted:hover {
-  height: 9px;
+  height: 8.75px;
 }
 
 .control-icons {
@@ -116,19 +121,18 @@
 }
 
 .left-region {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 32px;
-  margin-left: 10px;
   width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 10px;
 }
 
 .play-icon,
 .next-icon,
 .speaker-icon,
 .volume-icon,
-.current-chapter-name,
+.current-chapter-icon,
 .auto-play-icon,
 .caption-icon,
 .setting-icon,
@@ -226,15 +230,15 @@
 .volume-bar {
   display: flex;
   align-items: center;
-  width: 60px;
-  margin: 0px 10px 0px 14px;
+  width: 50px;
+  margin: 0px 10px 0px 20px;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   transition: all 0.2s ease-in;
 }
 
 .volume-bar .completed{
   width: 35%;
-  height: 3px;
+  height: 2.75px;
   background-color: white;
 }
 
@@ -256,15 +260,13 @@
   font-weight: 300;
   white-space: nowrap;
   cursor: text;
-  margin-left: -64px;
-  width: 188px;
-  overflow: hidden;
+  margin-left: -60px;
   transition: all 0.2s ease-in;
 }
 
 .mid-dot {
   font-weight: 700;
-  margin: 0px 4px;
+  margin: 0px 5px;
 }
 
 .current-chapter {
@@ -273,6 +275,13 @@
   display: flex;
   align-items: center;
   opacity: 0.9;
+}
+
+.current-chapter-name-and-arrow {
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, 71.5px 0, 71.5px 100%, 0 100%);
+  transition: all 0.2s ease-in;
 }
 
 .right-arrow {
@@ -287,29 +296,34 @@
   pointer-events: all;
 }
 
-.speaker-icon:hover ~ .video-time,
-.volume-icon:hover ~ .video-time {
-  margin-left: -3px;
-  width: 130px;
-}
-
 .speaker-icon:hover ~ .volume-icon .volume-bar,
 .volume-icon:hover .volume-bar{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.speaker-icon:hover ~ .video-time,
+.volume-icon:hover ~ .video-time {
+  margin-left: -2px;
+}
+
+.speaker-icon:hover ~ .video-time .current-chapter-name-and-arrow,
+.volume-icon:hover ~ .video-time .current-chapter-name-and-arrow {
+  clip-path: polygon(0 0, 13.5px 0, 13.5px 100%, 0 100%);
+}
+
 .right-region {
+  width: 270px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 25px;
   margin-right: 10px;
 }
 
 .toggle-button {
-  background-color: rgb(110, 110, 110);
+  background-color: rgb(140, 140, 140);
   height: 12px;
-  width: 30px;
+  width: 28px;
   border-radius: 6px;
   position: relative;
 }
