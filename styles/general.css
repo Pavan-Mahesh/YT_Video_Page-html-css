@@ -1,3 +1,17 @@
 body {
   font-family: Roboto, Arial;
 }
+
+p {
+  margin: 0px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 640px 1fr;
+}

@@ -67,7 +67,6 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 10px;
-  max-height: 40px;
   line-height: 20px;
 
   -webkit-line-clamp: 2;
@@ -85,12 +84,6 @@
   border: none;
   border-radius: 2px;
   width: max-content;
-}
-
-.chapter-icons {
-  display: flex;
-  width: 65px;
-  justify-content: space-between;
 }
 
 .chapter-icons {

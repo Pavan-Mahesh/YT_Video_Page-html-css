@@ -1,0 +1,283 @@
+.video-info {
+  margin: 12px 0px;
+}
+
+.info-flex-layout,
+.info-left-region,
+.info-right-region,
+.like-dislike {
+  display: flex;
+  align-items: center;
+}
+
+.info-flex-layout {
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.channel-profile {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+  height: 36px;
+  justify-content: space-between;
+  margin: 0px 26px 0px 12px;
+}
+
+.channel-info .name {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.channel-info .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.channel-info .name-tooltip {
+  position: absolute;
+  top: -40px;
+  background-color: rgba(90, 90, 90, 0.9);
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  white-space: nowrap;
+  padding: 10px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.channel-info .name:hover .name-tooltip {
+  opacity: 1;
+}
+
+.channel-info .subs {
+  font-size: 12px;
+  color: rgb(90, 90, 90);
+}
+
+.subscribe-button {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.subscribe-button:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+.icon-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.like-icon,
+.dislike-icon {
+  width: 18px;
+}
+
+.like-dislike {
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  height: 34px;
+}
+
+.like-button {
+  height: 100%;
+  padding-left: 14px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.like-icon {
+  margin-right: 10px;
+}
+
+.like-count {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+.like-button .icon-and-text::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.15);
+  width: 1px;
+  height: 22px;
+}
+
+.dislike-button{
+  height: 100%;
+  padding-left: 14px;
+  padding-right: 18px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.share-button {
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  height: 34px;
+  padding: 0px 16px 0px 12px;
+}
+
+.like-dislike,
+.share-button {
+  margin-right: 10px;
+}
+
+.share-icon {
+  width: 19px;
+}
+
+.say-share {
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+.menu-opt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+}
+
+.menu-icon {
+  width: 14px;
+}
+
+.like-button:hover,
+.dislike-button:hover,
+.share-button:hover,
+.menu-opt:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.like-button,
+.dislike-button,
+.share-button,
+.menu-opt {
+  cursor: pointer;
+}
+
+.like-button,
+.dislike-button,
+.share-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.right-region-tooltip {
+  position: absolute;
+  bottom: -24px;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  padding: 3px 3px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.like-button:hover .right-region-tooltip,
+.dislike-button:hover .right-region-tooltip,
+.share-button:hover .right-region-tooltip,
+.menu-opt:hover .right-region-tooltip{
+  opacity: 1;
+}
+
+.discription p {
+  line-height: 1.4;
+}
+
+.discription {
+  background-color: rgb(240, 240, 240);
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.upload-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.views-and-uploaded {
+  font-weight: 500;
+}
+
+.go-to-playlist {
+  font-weight: 500;
+  color:rgb(96, 96, 96);
+}
+
+.upload-tooltip {
+  align-self: center;
+  position: absolute;
+  bottom: -55px;
+  background-color: rgba(90, 90, 90, 0.9);
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  white-space: nowrap;
+  padding: 10px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.upload-info:hover .upload-tooltip {
+  opacity: 1;
+}
+
+.link {
+  color: rgb(6, 95, 212);
+  white-space: pre-wrap;
+}
+
+.show-more {
+  font-weight: 500;
+  position: relative;
+}
+
+.show-more::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  height: 20px;
+  width: 30px;
+  background-image: linear-gradient(to left, rgba(240, 240, 240, 1), rgba(240, 240, 240, 0));
+}
