@@ -1,0 +1,183 @@
+.suggestion-container {
+  max-width: 400px;
+  margin-top: 18px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion{
+  height: 96px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.suggestion-video {
+  height: 100%;
+  position: relative;
+}
+
+.suggestion-thumb-nail {
+  width: 170px;
+  border-radius: 10px;
+}
+
+.watch-later {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 18px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 4px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.add-to-queue {
+  position: absolute;
+  top: 36px;
+  right: 6px;
+  width: 18px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 7px 4px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.suggestion-time-stamp {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.suggestion:hover .watch-later,
+.suggestion:hover .add-to-queue {
+  opacity: 1;
+}
+
+.suggestion-info {
+  flex: 1;
+  width: 0px;
+  height: 100%;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion-video-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.suggestion-video-title .video-title {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-video-title .video-title-tooltip {
+  align-self: flex-end;
+  position: absolute;
+  top: 44px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 1px solid whitesmoke;
+  font-size: 11px;
+  padding: 3px 3px;
+  border-radius: 3px;
+  visibility: hidden;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.suggestion-video-title .video-title:hover ~ .video-title-tooltip {
+  visibility: visible;
+}
+
+.suggestion-video-author-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.suggestion-info .video-author {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-info .video-author-tooltip {
+  align-self: flex-start;
+  position: absolute;
+  top: -40px;
+  background-color: rgba(90, 90, 90, 0.9);
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+.suggestion-info .video-author:hover ~ .video-author-tooltip {
+  opacity: 1;
+}
+
+.suggestion-info .mid-dot {
+  font-weight: bold;
+  margin: 0px 3px;
+}
+
+.suggestion-info .video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.suggestion-menu-opt {
+  height: 100%;
+  margin-left: 3px;
+}
+
+.suggestion-menu-icon {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  padding: 6px;
+  opacity: 0;
+  transition: all 0.15s;
+}
+
+.suggestion-menu-icon:active {
+  background-color: rgb(240, 240, 240);
+}
+
+.suggestion:hover .suggestion-menu-icon{
+  opacity: 1;
+}

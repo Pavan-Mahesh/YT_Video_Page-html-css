@@ -1,5 +1,6 @@
 body {
   font-family: Roboto, Arial;
+  margin: 0px;
 }
 
 p {
@@ -9,9 +10,12 @@ p {
 .flex-container {
   display: flex;
   justify-content: center;
+  margin: 0px 24px 0px 24px;
 }
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 640px 1fr;
+  grid-template-columns: 640px minmax(300px, 1fr);
+  column-gap: 24px;
+  row-gap: 14px;
 }

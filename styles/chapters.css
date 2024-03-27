@@ -5,7 +5,6 @@
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  margin-left: 25px;
 }
 
 .chapter-scroll-box {
@@ -44,9 +43,10 @@
 }
 
 .chapter {
+  width: calc(100%-16px);
   display: flex;
   align-items: center;
-  padding: 8px 6px 8px 16px;
+  padding: 8px 0px 8px 16px;
   cursor: pointer;
 }
 
@@ -56,11 +56,12 @@
 }
 
 .chapter-info {
-  width: 290px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  flex-grow: 1;
   margin-left: 14px;
+  margin-right: 4px;
 }
 
 .chapter-name {
@@ -69,10 +70,11 @@
   margin-bottom: 10px;
   line-height: 20px;
 
-  -webkit-line-clamp: 2;
   display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .chapter-start {
@@ -87,11 +89,13 @@
 }
 
 .chapter-icons {
+  justify-self: end;
   display: flex;
   width: 80px;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 8px;
   opacity: 0;
   position: absolute;
 }

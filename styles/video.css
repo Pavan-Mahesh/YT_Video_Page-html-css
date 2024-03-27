@@ -266,8 +266,8 @@
   transition: all 0.2s ease-in;
 }
 
-.mid-dot {
-  font-weight: 700;
+.video-time .mid-dot {
+  font-weight: bold;
   margin: 0px 5px;
 }
 
@@ -282,7 +282,7 @@
 .current-chapter-name-and-arrow {
   display: flex;
   align-items: center;
-  clip-path: polygon(0 0, 71.5px 0, 71.5px 100%, 0 100%);
+  clip-path: polygon(0 0, 72px 0, 72px 100%, 0 100%);
   transition: all 0.2s ease-in;
 }
 
@@ -305,12 +305,12 @@
 
 .speaker-icon:hover ~ .video-time,
 .volume-icon:hover ~ .video-time {
-  margin-left: -2px;
+  margin-left: 0px;
 }
 
 .speaker-icon:hover ~ .video-time .current-chapter-name-and-arrow,
 .volume-icon:hover ~ .video-time .current-chapter-name-and-arrow {
-  clip-path: polygon(0 0, 13.5px 0, 13.5px 100%, 0 100%);
+  clip-path: polygon(0 0, 12.5px 0, 12.5px 100%, 0 100%);
 }
 
 .right-region {
@@ -325,7 +325,7 @@
 .toggle-button {
   background-color: rgb(140, 140, 140, 0.6);
   height: 12px;
-  width: 28px;
+  width: 24px;
   border-radius: 6px;
   position: relative;
 }
@@ -333,7 +333,7 @@
 .toggle-button .icon {
   width: 26px;
   position: absolute;
-  right: -9px;
+  right: -13px;
   bottom: -7px;
 }
 
