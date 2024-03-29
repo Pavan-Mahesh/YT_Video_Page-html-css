@@ -1,7 +1,6 @@
 .suggestion-container {
-  max-width: 400px;
-  margin-top: 18px;
-  cursor: pointer;
+  grid-row: span 2;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
 }
@@ -20,14 +19,14 @@
 }
 
 .suggestion-thumb-nail {
-  width: 170px;
-  border-radius: 10px;
+  width: 168px;
+  border-radius: 8px;
 }
 
 .watch-later {
   position: absolute;
-  top: 6px;
-  right: 6px;
+  top: 4px;
+  right: 4px;
   width: 18px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 4px;
@@ -38,8 +37,8 @@
 
 .add-to-queue {
   position: absolute;
-  top: 36px;
-  right: 6px;
+  top: 34px;
+  right: 4px;
   width: 18px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 7px 4px;
@@ -50,8 +49,8 @@
 
 .suggestion-time-stamp {
   position: absolute;
-  bottom: 6px;
-  right: 6px;
+  bottom: 4px;
+  right: 4px;
   font-size: 12px;
   font-weight: 500;
   background-color: black;
@@ -74,13 +73,13 @@
   flex-direction: column;
 }
 
-.suggestion-video-title {
+.video-title-container {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.suggestion-video-title .video-title {
+.video-title-container .video-title {
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 6px;
@@ -92,58 +91,90 @@
   text-overflow: ellipsis;
 }
 
-.suggestion-video-title .video-title-tooltip {
+.video-title-container .video-title-tooltip {
   align-self: flex-end;
   position: absolute;
-  top: 44px;
+  top: 42px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   border: 1px solid whitesmoke;
   font-size: 11px;
   padding: 3px 3px;
   border-radius: 3px;
-  visibility: hidden;
-  transition: opacity 0.15s;
+  opacity: 0;
+  transition: all 0.15s;
   pointer-events: none;
   z-index: 10;
   white-space: nowrap;
 }
 
-.suggestion-video-title .video-title:hover ~ .video-title-tooltip {
-  visibility: visible;
+.video-title-container .video-title:hover ~ .video-title-tooltip {
+  opacity: 1;
 }
 
-.suggestion-video-author-container {
+.verified-author-container {
+  display: flex;
+  align-items: center;
+}
+
+.video-author-container {
+  width: fit-content;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.suggestion-info .video-author {
+.verified-author-container .video-author-container {
+  max-width: calc(100% - 15px);
+}
+
+.video-author-container .video-author {
   font-size: 12px;
   color: rgb(96, 96, 96);
-  margin-bottom: 3px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.suggestion-info .video-author-tooltip {
-  align-self: flex-start;
+.verified-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.verified-container .verified-icon {
+  width: 12px;
+  margin-left: 3px;
+}
+
+.video-author-container .video-author-tooltip,
+.verified-container .verified-tooltip {
   position: absolute;
-  top: -40px;
   background-color: rgba(90, 90, 90, 0.9);
   color: white;
   font-size: 12px;
   font-weight: 400;
   padding: 10px 8px;
   border-radius: 4px;
+  white-space: nowrap;
   opacity: 0;
   transition: opacity 0.15s;
   pointer-events: none;
 }
 
-.suggestion-info .video-author:hover ~ .video-author-tooltip {
+.video-author-container .video-author-tooltip {
+  align-self: flex-end;
+  top: -40px;
+}
+
+.verified-container .verified-tooltip {
+  align-self: center;
+  top: -42px;
+}
+
+.video-author-container:hover .video-author-tooltip,
+.verified-container:hover .verified-tooltip{
   opacity: 1;
 }
 
@@ -158,6 +189,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-top: 3px;
 }
 
 .suggestion-menu-opt {

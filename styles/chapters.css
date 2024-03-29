@@ -1,7 +1,6 @@
 .chapters-container {
   border: 1px solid lightgray;
   height: 359px;
-  max-width: 400px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -46,7 +45,7 @@
   width: calc(100%-16px);
   display: flex;
   align-items: center;
-  padding: 8px 0px 8px 16px;
+  padding: 8px 0px 8px 15px;
   cursor: pointer;
 }
 
@@ -60,7 +59,7 @@
   flex-direction: column;
   justify-content: space-around;
   flex-grow: 1;
-  margin-left: 14px;
+  margin-left: 16px;
   margin-right: 4px;
 }
 
