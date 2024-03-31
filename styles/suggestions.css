@@ -9,7 +9,6 @@
   height: 96px;
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin-bottom: 8px;
 }
 
@@ -19,8 +18,9 @@
 }
 
 .suggestion-thumb-nail {
-  width: 168px;
+  width: 170px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .watch-later {
@@ -47,6 +47,11 @@
   transition: opacity 0.15s;
 }
 
+.suggestion:hover .watch-later,
+.suggestion:hover .add-to-queue {
+  opacity: 1;
+}
+
 .suggestion-time-stamp {
   position: absolute;
   bottom: 4px;
@@ -59,18 +64,27 @@
   border-radius: 3px;
 }
 
-.suggestion:hover .watch-later,
-.suggestion:hover .add-to-queue {
-  opacity: 1;
+.suggestion-play {
+  width: 24px;
+  position: absolute;
+  top: 32px;
+  left: 76px;
+  opacity: 0;
+  transition: all 0.15s;
+}
+
+.suggestion:hover .suggestion-play {
+  opacity: 0.7;
 }
 
 .suggestion-info {
   flex: 1;
   width: 0px;
   height: 100%;
-  margin-left: 8px;
+  margin-left: 7px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .video-title-container {
@@ -83,6 +97,7 @@
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 6px;
+  font-weight: 500;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -151,7 +166,7 @@
 .video-author-container .video-author-tooltip,
 .verified-container .verified-tooltip {
   position: absolute;
-  background-color: rgba(90, 90, 90, 0.9);
+  background-color: rgba(90, 90, 90, 0.8);
   color: white;
   font-size: 12px;
   font-weight: 400;

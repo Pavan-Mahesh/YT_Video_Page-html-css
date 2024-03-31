@@ -16,7 +16,7 @@
   margin-top: 10px;
 }
 
-.video-title {
+.video-info .video-title {
   font-size: 20px;
   font-weight: bold;
 }
@@ -34,14 +34,14 @@
   margin: 0px 24px 0px 12px;
 }
 
-.name-container .name-container {
+.name-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-.channel-info .name {
+.name-container .name {
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
@@ -51,7 +51,7 @@
 .name-container .name-tooltip {
   position: absolute;
   top: -40px;
-  background-color: rgba(90, 90, 90, 0.9);
+  background-color: rgba(90, 90, 90, 0.8);
   color: white;
   font-size: 12px;
   font-weight: 400;
@@ -63,7 +63,7 @@
   pointer-events: none;
 }
 
-.name-container .name:hover .name-tooltip {
+.name-container .name:hover ~ .name-tooltip {
   opacity: 1;
 }
 
@@ -100,12 +100,10 @@
 .like-dislike {
   background-color: rgb(240, 240, 240);
   border-radius: 20px;
-  padding: 7px 0px;
 }
 
 .like-button {
-  height: 100%;
-  padding-left: 14px;
+  padding: 7px 0px 7px 14px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -128,9 +126,7 @@
 }
 
 .dislike-button{
-  height: 100%;
-  padding-left: 14px;
-  padding-right: 20px;
+  padding: 8px 20px 8px 14px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -196,7 +192,7 @@
 
 .right-region-tooltip {
   position: absolute;
-  bottom: -24px;
+  bottom: -30px;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   font-size: 11px;
@@ -247,7 +243,7 @@
   align-self: center;
   position: absolute;
   bottom: -55px;
-  background-color: rgba(90, 90, 90, 0.9);
+  background-color: rgba(90, 90, 90, 0.8);
   color: white;
   font-size: 12px;
   font-weight: 300;
@@ -268,7 +264,7 @@
   opacity: 1;
 }
 
-.link {
+.discription .link {
   color: rgb(6, 95, 212);
   white-space: pre-wrap;
 }

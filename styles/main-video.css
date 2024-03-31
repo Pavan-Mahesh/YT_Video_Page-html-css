@@ -1,13 +1,47 @@
 .main-video {
+  max-width: 640px; 
   position: relative;
   border-radius: 12px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .main-video-thumbnail {
-  width: 640px;
-  height: 360px;
+  width: 100%;
   display: block;
+}
+
+.play-yt-button {
+  position: absolute;
+  top: 155px;
+  left: 285px;
+}
+
+.black-yt,
+.red-yt {
+  width: 70px;
+  display: block;
+}
+
+.black-yt {
+  position: relative;
+  opacity: 0.7;
+}
+
+.red-yt {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: all 0.15s;
+}
+
+.play-yt {
+  height: 22px;
+  width: 30px;
+  position: absolute;
+  top: 14px;
+  left: 22px;
 }
 
 .control {
@@ -26,7 +60,8 @@
   transition: all 0.15s ease-in;
 }
 
-.main-video:hover .control{
+.main-video:hover .control,
+.main-video:hover .red-yt{
   opacity: 1;
 }
 
@@ -34,13 +69,18 @@
   display: flex;
   align-items: center;
   height: 18px;
+  width: 95%;
 }
 
 .video-time-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 620px;
+  width: 100%;
+}
+
+.video-time-bar * {
+  margin: 0px 0.5px;
 }
 
 .video-time-bar .completed {
@@ -102,20 +142,19 @@
 }
 
 .control-icons {
-  width: 610px;
+  width: 92%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 6px 16px 14px 16px;
+  margin: 6px 0px 14px 0px;
 }
 
 .left-region {
-  width: 300px;
+  width: 60%;
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-left: 10px;
 }
 
 .play-icon,
@@ -314,12 +353,12 @@
 }
 
 .right-region {
-  width: 270px;
+  width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  margin-right: 10px;
+  gap: 27px;
+  margin-left: -35px;
 }
 
 .toggle-button {

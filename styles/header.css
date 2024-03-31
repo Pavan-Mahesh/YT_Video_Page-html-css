@@ -1,0 +1,175 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 56px;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+}
+
+.left-session {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 90px;
+}
+
+.menu {
+  height: 24px;
+  margin-right: 24px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: start;
+  position: relative;
+}
+
+.logo {
+  height: 20px;
+}
+
+.country {
+  font-size: 10px;
+  color: rgb(96, 96, 96);
+  position: absolute;
+  top: -6px;
+  right: -14px;
+}
+
+.middle-session {
+  flex: 1;
+  max-width: 660px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  flex: 1;
+  width: 0px; /*for complete shrink*/
+  font-size: 16px;
+  height: 36px;
+  padding-left: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(180, 180, 180);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.search-button {
+  width: 62px;
+  height: 39px;
+  background-color: rgb(247, 247, 247);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(180, 180, 180);
+  margin-left: -1px;
+  margin-right: 16px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 0.15s;
+}
+
+.search-button:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.search-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.voice-search-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(239, 239, 239);
+}
+
+.voice-search-button:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.voice-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.right-session {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  margin-right: 16px;
+}
+
+.header-setting-icon {
+  height: 16px;
+  padding: 8px 14px;
+}
+
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 7px 14px 7px 10px;
+  border-radius: 20px;
+  margin-left: 12px;
+  transition: all 0.15s;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(222, 241, 255);
+  border-color: rgb(222, 241, 255);
+}
+
+.sign-in-icon {
+  height: 20px;
+}
+
+.sign-in-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(6, 95, 212);
+  margin-left: 8px;
+}
+
+.search-button,
+.voice-search-button,
+.header-settings-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.header-icon-tooltip {
+  background-color: rgb(96, 96, 96, 0.9);
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -55px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.search-button:hover .header-icon-tooltip,
+.voice-search-button:hover .header-icon-tooltip,
+.header-settings-button:hover .header-icon-tooltip {
+  opacity: 1;
+}

@@ -7,18 +7,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main-video.css">
     <link rel="stylesheet" href="styles/video-info.css">
     <link rel="stylesheet" href="styles/chapters.css">
     <link rel="stylesheet" href="styles/suggestions.css">
     <link rel="stylesheet" href="styles/comments.css">
+    <link rel="stylesheet" href="styles/general.css">
   </head>
   <body>
+    <header class="header">
+      <div class="left-session">
+        <img class="menu" src="header-icons/hamburger-menu.svg">
+        <div class="logo-container">
+          <img class="logo" src="header-icons/youtube-logo.svg">
+          <div class="country">IN</div>
+        </div>
+      </div>
+      <div class="middle-session">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="header-icons/search.svg">
+          <div class="header-icon-tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img class="voice-icon" src="header-icons/voice-search-icon.svg">
+          <div class="header-icon-tooltip">Search with your voice</div>
+        </button>
+      </div>
+      <div class="right-session">
+        <div class="header-settings-button">
+          <img class="header-setting-icon" src="icons/more-opt-90.svg">
+          <div class="header-icon-tooltip">Settings</div>
+        </div>
+        <div class="sign-in-button">
+          <img class="sign-in-icon" src="icons/sign-in.svg">
+          <div class="sign-in-text">Sign in</div>
+        </div>
+      </div>
+    </header>
     <main class="flex-container">
       <div class="grid-layout">
         <div class="main-video">
           <img class="main-video-thumbnail" src="thumb-nails/thumbnail-1.webp">
+          <div class="play-yt-button">
+            <img class="black-yt" src="icons/black-yt.svg">
+            <img class="red-yt" src="icons/red-yt.svg">
+            <img class="play-yt" src="icons/play.svg">
+          </div>
           <div class="control">
             <div class="video-time-bar-flex">
               <div class="video-time-bar">
@@ -123,7 +159,7 @@
           <!-- header -->
           <div class="chapter-header">
             <div class="chapter-header-name">Chapters</div>
-            <img class="chapter-header-close"src="icons/close.png">
+            <img class="chapter-header-close"src="icons/close.svg">
           </div>
           <!-- scrollbar -->
           <div class="chapter-scroll-box">
@@ -135,8 +171,8 @@
                 <div class="chapter-start">0:00</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 1 -->
@@ -147,8 +183,8 @@
                 <div class="chapter-start">1:02</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 2 -->
@@ -159,8 +195,8 @@
                 <div class="chapter-start">17:42</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 3 -->
@@ -171,8 +207,8 @@
                 <div class="chapter-start">44:39</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 4 -->
@@ -183,8 +219,8 @@
                 <div class="chapter-start">1:03:10</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 5 -->
@@ -195,8 +231,8 @@
                 <div class="chapter-start">1:17:30</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 6 -->
@@ -207,8 +243,8 @@
                 <div class="chapter-start">1:52:18</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 7 -->
@@ -219,8 +255,8 @@
                 <div class="chapter-start">2:11:08</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 8 -->
@@ -231,8 +267,8 @@
                 <div class="chapter-start">2:25:42</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 9 -->
@@ -243,8 +279,8 @@
                 <div class="chapter-start">2:34:58</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 10 -->
@@ -255,8 +291,8 @@
                 <div class="chapter-start">2:46:55</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 11 -->
@@ -267,8 +303,8 @@
                 <div class="chapter-start">3:16:58</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 12 -->
@@ -279,8 +315,8 @@
                 <div class="chapter-start">3:43:58</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 13 -->
@@ -291,8 +327,8 @@
                 <div class="chapter-start">4:15:21</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 14 -->
@@ -303,8 +339,8 @@
                 <div class="chapter-start">4:44:36</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 15 -->
@@ -315,8 +351,8 @@
                 <div class="chapter-start">5:07:14</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 16 -->
@@ -327,8 +363,8 @@
                 <div class="chapter-start">5:33:49</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- chapter 17 -->
@@ -339,8 +375,8 @@
                 <div class="chapter-start">6:07:46</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
             <!-- outro -->
@@ -351,8 +387,8 @@
                 <div class="chapter-start">6:30:21</div>
               </div>
               <div class="chapter-icons">
-                <img class="share" src="icons/share.png">
-                <img class="repeat" src="icons/repeat.png">
+                <img class="share" src="icons/share.svg">
+                <img class="repeat" src="icons/repeat.svg">
               </div>
             </div>
           </div>
@@ -427,6 +463,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">29:37</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -450,6 +487,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">24:03</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -479,6 +517,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">2:27</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -508,6 +547,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">14:50</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -531,6 +571,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">11:57:22</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -554,6 +595,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">7:08</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -583,6 +625,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">12:20</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -612,6 +655,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">8:16</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -635,6 +679,7 @@
               <img class="watch-later" src="icons/watch-later.svg">
               <img class="add-to-queue" src="icons/add-to-queue.svg">
               <div class="suggestion-time-stamp">1:46</div>
+              <img class="suggestion-play" src="icons/play-black.svg">
             </div>
             <div class="suggestion-info">
               <div class="video-title-container">
@@ -658,7 +703,6 @@
             </div>
           </div>
 
-
         </div>
         <div class="comments-section">
           <div class="count-and-sort-by-container">
@@ -678,8 +722,51 @@
               <hr class="hr-line">
             </div>
           </div>
+          <!-- author comment -->
           <div class="comment-container">
-            <img class="comment-profile" src="channel-profiles/dp-2.jpeg">
+            <img class="comment-profile" src="channel-profiles/ssd-profile.jpg">
+            <div class="comment-info">
+              <div class="pinned-by-container">
+                <img class="pinned-icon" src="icons/pinned.svg">
+                <p class="pinned-by">Pinned by SuperSimpleDev</p>
+              </div>
+              <div class="commented-by-and-time">
+                <div id="commented-by-author" class="commented-channel-name">
+                  @SuperSimpleDev
+                  <div class="commented-by-author-tooltip">SuperSimpleDev</div>
+                </div>
+                <div class="commented-time">8 months ago (edited)</div>
+              </div>
+              <p class="comment-content">
+                Lesson 10: if you're confused with vertical vs horizontal layouts, it may help to see this updated diagram:<br>
+                <span class="link">https://github.com/SuperSimpleDev/html-css-course-2022/blob/main/3-extra/vertical-horizontal-layouts.png</span><br>
+                <span class="trible-dots">...</span>
+                <span class="read-more">Read more</span>
+              </p>
+              <div class="like-dislike-reply">
+                <div class="comment-like-container">
+                  <div class="comment-like-button">
+                    <img class="comment-like-icon" src="icons/like.svg">
+                    <div class="comment-like-tooltip">Like</div>
+                  </div>
+                  <div class="comment-like-count">613</div>
+                </div>
+                <div class="comment-dislike-button">
+                  <img class="comment-dislike-icon" src="icons/dislike.svg">
+                  <div class="comment-dislike-tooltip">Dislike</div>
+                </div>
+                <div class="reply-option">Reply</div>
+              </div>
+            </div>
+          </div>
+          <div class="replies-container">
+            <img class="show-reply-icon" src="icons/show-reply.svg">
+            <img class="replied-author-channel" src="channel-profiles/ssd-profile.jpg">
+            <p class="replies-count"><span class="reply-middot">&bull;</span>88 replies</p>
+          </div>
+          <!-- comment with author like and author reply -->
+          <div class="comment-container">
+            <img class="comment-profile" src="channel-profiles/dp-1.jpeg">
             <div class="comment-info">
               <div class="commented-by-and-time">
                 <div class="commented-channel-name">@senku-ishigami1403</div>
@@ -700,24 +787,112 @@
                   <img class="comment-dislike-icon" src="icons/dislike.svg">
                   <div class="comment-dislike-tooltip">Dislike</div>
                 </div>
-                <div class="liked-by-sir-container">
+                <div class="liked-by-author-container">
                   <div class="liked-by-channel-with-heart">
-                    <img class="liked-by-sir-icon" src="channel-profiles/ssd-profile.jpg">
+                    <img class="liked-by-author-icon" src="channel-profiles/ssd-profile.jpg">
                     <div class="white-heart">
                       <div class="red-heart"></div>
                     </div>
                   </div>
-                  <div class="liked-by-sir-tooltip">&#10084; by SuperSimpleDev</div>
+                  <div class="liked-by-author-tooltip">&#10084; by SuperSimpleDev</div>
                 </div>
                 <div class="reply-option">Reply</div>
               </div>
-              <div class="replies-container">
-                <img class="show-reply-icon" src="icons/show-reply.svg">
-                <img class="replied-sir-channel" src="channel-profiles/ssd-profile.jpg">
-                <p class="replies-count"><span class="reply-middot">&bull;</span> 68 replies</p>
+            </div>
+          </div>
+          <div class="replies-container">
+            <img class="show-reply-icon" src="icons/show-reply.svg">
+            <img class="replied-author-channel" src="channel-profiles/ssd-profile.jpg">
+            <p class="replies-count"><span class="reply-middot">&bull;</span>68 replies</p>
+          </div>
+          <!-- comment with no author like and no author reply -->
+          <div class="comment-container">
+            <img class="comment-profile" src="channel-profiles/dp-2.jpeg">
+            <div class="comment-info">
+              <div class="commented-by-and-time">
+                <div class="commented-channel-name">@shikamaru-nara2209</div>
+                <div class="commented-time">1 month ago (edited)</div>
+              </div>
+              <p class="comment-content">
+                Just a quick tip. Instead of:<br>
+                margin-top: 1px;<br>
+                margin-right: 2px;<br>
+                margin-bottom: 3px;<br>
+                margin-left: 4px;<br>
+                <br>
+                You can use:<br>
+                margin: 1px 2px 3px 4px;<br>
+                <br>
+                Works for padding too. The order of the inputs is always clockwise (top, right, bottom, left).<br>
+                <br>
+                Edit: oops, I see you mention it at the end of the video! Thought you might have wanted to mention it earlier.
+                <span class="show-less">Show less</span>
+              </p>
+              <div class="like-dislike-reply">
+                <div class="comment-like-container">
+                  <div class="comment-like-button">
+                    <img class="comment-like-icon" src="icons/like.svg">
+                    <div class="comment-like-tooltip">Like</div>
+                  </div>
+                  <div class="comment-like-count">186</div>
+                </div>
+                <div class="comment-dislike-button">
+                  <img class="comment-dislike-icon" src="icons/dislike.svg">
+                  <div class="comment-dislike-tooltip">Dislike</div>
+                </div>
+                <div class="reply-option">Reply</div>
               </div>
             </div>
           </div>
+          <div id="no-author-reply" class="replies-container">
+            <img class="show-reply-icon" src="icons/show-reply.svg">
+            <p class="replies-count">5 replies</p>
+          </div>
+          <!-- comment with amount -->
+          <div id="comment-with-amount" class="comment-container">
+            <img class="comment-profile" src="channel-profiles/dp-3.jpeg">
+            <div class="comment-info">
+              <div class="commented-by-and-time">
+                <div class="commented-channel-name">Tōru Kazama</div>
+                <div class="commented-time">10 months ago</div>
+              </div>
+              <div class="amount-container">
+                <img class="amount-icon" src="icons/amount.svg">$15.00
+              </div>
+              <p class="comment-content">
+                This course is in a league of its own.  Thank you!!
+              </p>
+              <div class="like-dislike-reply">
+                <div class="comment-like-container">
+                  <div class="comment-like-button">
+                    <img class="comment-like-icon" src="icons/like.svg">
+                    <div class="comment-like-tooltip">Like</div>
+                  </div>
+                  <div class="comment-like-count">491</div>
+                </div>
+                <div class="comment-dislike-button">
+                  <img class="comment-dislike-icon" src="icons/dislike.svg">
+                  <div class="comment-dislike-tooltip">Dislike</div>
+                </div>
+                <div class="liked-by-author-container">
+                  <div class="liked-by-channel-with-heart">
+                    <img class="liked-by-author-icon" src="channel-profiles/ssd-profile.jpg">
+                    <div class="white-heart">
+                      <div class="red-heart"></div>
+                    </div>
+                  </div>
+                  <div class="liked-by-author-tooltip">&#10084; by SuperSimpleDev</div>
+                </div>
+                <div class="reply-option">Reply</div>
+              </div>
+            </div>
+          </div>
+          <div class="replies-container">
+            <img class="show-reply-icon" src="icons/show-reply.svg">
+            <img class="replied-author-channel" src="channel-profiles/ssd-profile.jpg">
+            <p class="replies-count"><span class="reply-middot">&bull;</span>5 replies</p>
+          </div>
+
         </div>
       </div>
     </main>

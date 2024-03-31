@@ -99,10 +99,17 @@
   position: absolute;
 }
 
-.chapter-icons img {
-  width: 26px;
-  padding: 6px;
-  border-radius: 50%;
+.chapter-icons {
+  .share {
+    width: 24px;
+    padding: 8px;
+    border-radius: 50%;
+  }
+  .repeat {
+    width: 24px;
+    padding: 8px;
+    border-radius: 50%;
+  }
 }
 
 .share:hover,
