@@ -186,6 +186,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 3px;
+  width: fit-content;
 }
 
 .video-title-container .video-title-tooltip,
