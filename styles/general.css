@@ -152,7 +152,7 @@ p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
   .header .left-session {
     margin-left: 6px;
   }
