@@ -122,6 +122,10 @@ p {
     margin: 0px 6px;
   }
 
+  .header .left-session {
+    margin-right: 0px;
+  }
+
   .header .middle-session {
     .search-bar {
       opacity: 0;
@@ -143,11 +147,5 @@ p {
 
   .header .right-session {
     margin-left: 0px;
-  }
-}
-
-@media (max-width: 512px) {
-  .header .left-session {
-    margin-right: 0px;
   }
 }
