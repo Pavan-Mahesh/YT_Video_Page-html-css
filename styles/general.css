@@ -151,32 +151,3 @@ p {
     margin-right: 0px;
   }
 }
-
-@media (max-width: 460px) {
-  .header .left-session {
-    margin-left: 6px;
-  }
-
-  .header .middle-session {
-    .search-button {
-      margin: 0px 2px 0px 6px;
-    }
-
-    .voice-search-button {
-      margin: 0px 2px 0px 2px;
-    }
-  }
-
-  .header .right-session {
-    margin-right: 6px;
-
-    .header-setting-icon {
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-
-    .sign-in-button {
-      margin-left: 8px;
-    }
-  }
-}

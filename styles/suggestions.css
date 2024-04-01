@@ -18,7 +18,8 @@
 }
 
 .suggestion-thumb-nail {
-  width: 170px;
+  width: 168px;
+  height: 94px;
   border-radius: 8px;
   cursor: pointer;
 }
