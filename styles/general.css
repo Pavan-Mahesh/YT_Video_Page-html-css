@@ -51,7 +51,7 @@ p {
 
 @media (max-width: 690px) {
   .main-video {
-    max-width: 440px;
+    width: 420px;
   }
 
   .left-region {
@@ -67,12 +67,12 @@ p {
   }
   
   .video-time-text {
-    clip-path: polygon(0 0, 114px 0, 114px 100%, 0 100%);
+    clip-path: polygon(0 0, 98px 0, 98px 100%, 0 100%);
   }
   
   .speaker-icon:hover ~ .video-time .video-time-text,
   .volume-icon:hover ~ .video-time .video-time-text {
-    clip-path: polygon(0 0, 54px 0, 54px 100%, 0 100%);
+    clip-path: polygon(0 0, 38px 0, 38px 100%, 0 100%);
   }
 
   .right-region {
