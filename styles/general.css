@@ -38,6 +38,11 @@ p {
     margin-top: 24px;
   }
 
+  .comment-container {
+    padding-right: 10px;
+    margin-right: -10px;
+  }
+
   .video-title-container .video-title-tooltip,
   .video-stats-container .video-stats-tooltip {
     align-self: flex-start;
