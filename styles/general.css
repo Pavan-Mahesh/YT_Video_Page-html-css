@@ -119,10 +119,11 @@ p {
 
 @media (max-width: 624px) {
   .flex-container {
-    margin: 0px 6px;
+    margin: 0px 16px 0px 16px;
   }
 
   .header .left-session {
+    margin-left: 16px;
     margin-right: 0px;
   }
 
@@ -147,5 +148,6 @@ p {
 
   .header .right-session {
     margin-left: 0px;
+    margin-right: 16px;
   }
 }
