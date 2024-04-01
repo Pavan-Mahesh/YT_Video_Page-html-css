@@ -37,13 +37,19 @@ p {
   .comments-section {
     margin-top: 24px;
   }
+
+  .video-title-container .video-title-tooltip,
+  .video-stats-container .video-stats-tooltip {
+    align-self: flex-start;
+  }
+
+  .show-more-suggestions {
+    opacity: 1;
+  }
+
 }
 
 @media (max-width: 690px) {
-  .flex-container {
-    margin: 0px 6px;
-  }
-
   .main-video {
     max-width: 440px;
   }
@@ -112,6 +118,10 @@ p {
 }
 
 @media (max-width: 624px) {
+  .flex-container {
+    margin: 0px 6px;
+  }
+
   .header .middle-session {
     .search-bar {
       opacity: 0;

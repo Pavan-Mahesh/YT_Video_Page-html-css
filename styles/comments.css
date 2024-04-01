@@ -305,7 +305,7 @@
 
 .comment-like-tooltip, 
 .comment-dislike-tooltip {
-  bottom: -46px;
+  bottom: -54px;
   z-index: 20;
 }
 
