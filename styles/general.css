@@ -72,7 +72,7 @@ p {
   }
   
   .video-time-text {
-    clip-path: polygon(0 0, 98px 0, 98px 100%, 0 100%);
+    clip-path: polygon(0 0, 97px 0, 97px 100%, 0 100%);
   }
   
   .speaker-icon:hover ~ .video-time .video-time-text,
