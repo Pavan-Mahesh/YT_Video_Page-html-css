@@ -13,8 +13,8 @@
 
 .play-yt-button {
   position: absolute;
-  top: 155px;
-  left: 285px;
+  top: 42.75%;
+  left: 44.5%;
 }
 
 .black-yt,
@@ -37,7 +37,7 @@
 }
 
 .play-yt {
-  height: 22px;
+  height: 22.5px;
   width: 30px;
   position: absolute;
   top: 14px;
@@ -161,7 +161,7 @@
 .next-icon,
 .speaker-icon,
 .volume-icon,
-.current-chapter-icon,
+.video-time,
 .auto-play-icon,
 .caption-icon,
 .setting-icon,
@@ -293,7 +293,7 @@
   background-color: rgba(200, 200, 200, 0.4);
 }
 
-.video-time {
+.video-time-text {
   display: flex;
   align-items: center;
   font-size: 14px;
@@ -302,10 +302,11 @@
   white-space: nowrap;
   cursor: text;
   margin-left: -60px;
+  clip-path: polygon(0 0, 188px 0, 188px 100%, 0 100%);
   transition: all 0.2s ease-in;
 }
 
-.video-time .mid-dot {
+.video-time-text .mid-dot {
   font-weight: bold;
   margin: 0px 5px;
 }
@@ -321,8 +322,6 @@
 .current-chapter-name-and-arrow {
   display: flex;
   align-items: center;
-  clip-path: polygon(0 0, 72px 0, 72px 100%, 0 100%);
-  transition: all 0.2s ease-in;
 }
 
 .right-arrow {
@@ -330,6 +329,10 @@
   margin-left: 6px;
   cursor: pointer;
   opacity: 0.9;
+}
+
+.video-time .tooltip {
+  right: 28px;
 }
 
 .speaker-icon:hover ~ .volume-icon,
@@ -342,14 +345,14 @@
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.speaker-icon:hover ~ .video-time,
-.volume-icon:hover ~ .video-time {
+.speaker-icon:hover ~ .video-time  .video-time-text,
+.volume-icon:hover ~ .video-time  .video-time-text {
   margin-left: 0px;
 }
 
-.speaker-icon:hover ~ .video-time .current-chapter-name-and-arrow,
-.volume-icon:hover ~ .video-time .current-chapter-name-and-arrow {
-  clip-path: polygon(0 0, 12.5px 0, 12.5px 100%, 0 100%);
+.speaker-icon:hover ~ .video-time .video-time-text,
+.volume-icon:hover ~ .video-time .video-time-text {
+  clip-path: polygon(0 0, 128px 0, 128px 100%, 0 100%);
 }
 
 .right-region {
@@ -357,12 +360,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: end;
   gap: 27px;
   margin-left: -35px;
 }
 
 .toggle-button {
-  background-color: rgb(140, 140, 140, 0.6);
+  background-color: rgb(200, 200, 200, 0.8);
   height: 12px;
   width: 24px;
   border-radius: 6px;
@@ -380,13 +384,13 @@
   top: -52px;
 }
 
+.caption-icon .icon {
+  width: 22px;
+}
+
 .setting-icon .icon,
 .full-screen-icon .icon {
   width: 20px;
-}
-
-.caption-icon .icon {
-  width: 22px;
 }
 
 .theater-icon .icon,
@@ -403,9 +407,9 @@
 .speaker-icon:hover .tooltip,
 .volume-icon:hover,
 .volume-icon:hover .tooltip,
-.current-chapter:hover,
-.current-chapter:hover .right-arrow,
-.current-chapter:hover .tooltip,
+.video-time-text:has(.current-chapter:hover),
+.video-time-text:has(.current-chapter:hover) .right-arrow,
+.video-time-text:has(.current-chapter:hover) ~ .tooltip,
 .auto-play-icon:hover,
 .auto-play-icon:hover .tooltip,
 .caption-icon:hover,
@@ -418,5 +422,5 @@
 .miniplayer-icon:hover .tooltip,
 .full-screen-icon:hover,
 .full-screen-icon:hover .tooltip {
-  opacity: 1.5;
+  opacity: 1;
 }

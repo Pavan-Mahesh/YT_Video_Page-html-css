@@ -42,7 +42,7 @@
 
 .sort-by-tooltip {
   position: absolute;
-  bottom: -54px;
+  bottom: -60px;
   background-color: rgba(90, 90, 90, 0.8);
   color: white;
   font-size: 12px;
@@ -52,6 +52,7 @@
   opacity: 0;
   transition: all 0.15s;
   pointer-events: none;
+  z-index: 20;
 }
 
 .sort-by-icon-and-text:hover ~ .sort-by-tooltip {
@@ -304,11 +305,13 @@
 
 .comment-like-tooltip, 
 .comment-dislike-tooltip {
-  bottom: -54px;
+  bottom: -46px;
+  z-index: 20;
 }
 
 .liked-by-author-tooltip {
   bottom: -60px;
+  z-index: 20;
 }
 
 #commented-by-author:hover .commented-by-author-tooltip,
@@ -337,6 +340,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-top: 6px;
   margin-left: 56px;
 }
 

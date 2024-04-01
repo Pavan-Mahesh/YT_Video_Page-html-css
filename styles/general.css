@@ -22,12 +22,13 @@ p {
 
 @media (max-width: 999px) {
   .grid-layout {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .main-video {
-    justify-self: center;
+    align-self: center;
   }
 
   .chapters-container,
@@ -39,7 +40,104 @@ p {
 }
 
 @media (max-width: 690px) {
+  .flex-container {
+    margin: 0px 6px;
+  }
+
   .main-video {
-    max-width: 460px;
+    max-width: 440px;
+  }
+
+  .left-region {
+    gap: 20px;
+  }
+
+  .left-region .icon {
+    width: 13px;
+  }
+
+  .play-icon .icon {
+    width: 12px;
+  }
+  
+  .video-time-text {
+    clip-path: polygon(0 0, 114px 0, 114px 100%, 0 100%);
+  }
+  
+  .speaker-icon:hover ~ .video-time .video-time-text,
+  .volume-icon:hover ~ .video-time .video-time-text {
+    clip-path: polygon(0 0, 54px 0, 54px 100%, 0 100%);
+  }
+
+  .right-region {
+    gap: 18px;
+    justify-content: end;
+  }
+
+  .toggle-button {
+    width: 16px;
+    height: 10px;
+    margin-right: 6px;
+  }
+
+  .toggle-button .icon {
+    width: 20px;
+    bottom: -5px;
+    right: -12px;
+  }
+
+  .caption-icon .icon {
+    width: 16px;
+  }
+  
+  .setting-icon .icon,
+  .full-screen-icon .icon {
+    width: 14px;
+  }
+  
+  .theater-icon .icon,
+  .miniplayer-icon .icon {
+    width: 18px;
+  }
+
+  .play-yt-button {
+    top: 40%;
+    left: 42.15%;
+  }
+
+  .info-flex-layout {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 624px) {
+  .header .middle-session {
+    .search-bar {
+      opacity: 0;
+    }
+
+    .search-button {
+      background-color: white;
+      border: none;
+      width: fit-content;
+      margin: 0px 8px;
+    }
+
+    .voice-search-button {
+      background-color: white;
+      width: fit-content;
+      margin: 0px 8px;
+    }
+  }
+
+  .header .right-session {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 512px) {
+  .header .left-session {
+    margin-right: 0px;
   }
 }

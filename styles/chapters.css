@@ -1,6 +1,6 @@
 .chapters-container {
   border: 1px solid lightgray;
-  height: 359px;
+  max-height: 359px;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -15,7 +15,7 @@
 .chapter-scroll-box::after {
   content: '';
   display: block;
-  height: 52px;
+  height: 60px;
 }
 
 .chapter-header {

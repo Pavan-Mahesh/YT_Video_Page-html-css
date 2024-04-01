@@ -74,7 +74,6 @@
   margin-right: 16px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  transition: all 0.15s;
 }
 
 .search-button:hover {
@@ -139,6 +138,7 @@
   font-weight: 500;
   color: rgb(6, 95, 212);
   margin-left: 8px;
+  white-space: nowrap;
 }
 
 .search-button,
