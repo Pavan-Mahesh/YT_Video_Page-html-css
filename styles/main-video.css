@@ -208,24 +208,32 @@
   flex-direction: column;
   align-items: stretch;
   position: absolute;
-  top: -220px;
+  top: -224px;
   right: -175px;
   opacity: 0;
   transition: all 0.2s ease-in;
   pointer-events: none;
+  background-color: rgb(40, 40, 40);
 }
 
-.image-tooltip .tooltip{
-  position: relative;
-  top: 6px;
-  text-align: center;
+.image-tooltip .tooltip-text{
+  font-size: 13px;
+  background-color: rgb(40, 40, 40);
+  font-weight: 500;
+  color: white;
+  padding: 2px 8px 8px 8px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-bottom: -4px;
 }
 
 .tooltip-img {
+  align-self: center;
   width: 240px;
   display: block;
   border-radius: 6px;
   border: 3px solid rgb(60, 60, 60);
+  z-index: 10;
 }
 
 .next-icon .time-stamp {
@@ -238,6 +246,7 @@
   color: white;
   padding: 2px 4px;
   border-radius: 3px;
+  z-index: 11;
 }
 
 .image-tooltip .next-video-title {
@@ -245,10 +254,9 @@
   background-color: rgb(40, 40, 40);
   font-weight: 500;
   color: white;
-  padding: 4px 8px;
+  padding:10px 8px 2px 8px;
   border-radius: 3px;
-  position: relative;
-  bottom: 6px;
+  margin-top: -6px;
 }
 
 .speaker-icon .icon {
@@ -291,6 +299,10 @@
   width: 65%;
   height: 4px;
   background-color: rgba(200, 200, 200, 0.4);
+}
+
+.volume-icon .tooltip {
+  left: 13px;
 }
 
 .video-time-text {
